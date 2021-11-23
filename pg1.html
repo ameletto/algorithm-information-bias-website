@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>How social media is brainwashing you</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="css/foundation.css" rel="stylesheet" type="text/css" />
-    <link href="css/twentytwenty.css" rel="stylesheet" type="text/css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,52 +13,56 @@
 </head>
 
 <body style="background-color:black">
-    <div class="gradient-navbar">
-        <ul>
-            <li>
-                <marquee direction="right" height="screen" href="google.com" width="screen" bgcolor="white">
-                    <font color=\ "black\" face=\ "arial\" size=\ "4\">Scrolling text</font>
-                </marquee>
-            </li>
-            <li>
-                <marquee direction="right" height="screen" href="google.com" width="screen" bgcolor="white">Scrolling text</marquee>
-            </li>
-            <li>
-                <marquee direction="right" height="screen" href="google.com" width="screen" bgcolor="white">Scrolling text</marquee>
-            </li>
-            <li>
-                <marquee direction="right" height="screen" href="google.com" width="screen" bgcolor="white">Scrolling text</marquee>
-            </li>
-            <!-- <li><a href="google.com">Home</a></li>
-            <li><a href="google.com">News</a></li>
-            <li><a href="google.com">Contact</a></li>
-            <li><a href="google.com">About</a></li> -->
-        </ul>
-    </div>
-    <h1 class="game-font">Title</h1>
-    <img src="https://i.imgur.com/kDDFvUp.png" class="rotate" width="100" height="100" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-    <script src="script.js"></script>
-
-    <div class="row" style="margin-top: 2em;">
-        <div class="large-8 columns">
-            <div class="twentytwenty-container">
-                <img src="allan-nip.jpg" />
-                <img src="allan-smol.png" />
-            </div>
-        </div>
+    <div>
+        <div class="fade">Ever wonder why is societally becoming more politically divided?</div>
+        <div class="fade">Why protecting your privacy and not collecting your data is valued?</div>
+        <div class="fade">Fake news spreads faster than real news</div>
+        <div class="fade">Welcome to</div>
+        <div class="fade">Understanding the Implications of Content Algorithms</div>
+        <div class="fade">But first, what is a content algorithm?</div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <script src="js/jquery.event.move.js"></script>
-    <script src="js/jquery.twentytwenty.js"></script>
+    <style>
+        .fade {
+            margin: 300px;
+            padding: 100px;
+            background-color: white;
+            opacity: 1;
+        }
+    </style>
+
     <script>
-        $(function() {
-            $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({
-                default_offset_pct: 0.5
-            });
+        $(window).on("load", function() {
+            $(window).scroll(function() {
+                var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+                $(".fade").each(function() {
+                    /* Check the location of each desired element */
+                    var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+                    /* If the element is completely within bounds of the window, fade it in */
+                    if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+                        if ($(this).css("opacity") == 0) {
+                            $(this).fadeTo(500, 1);
+                        }
+                    } else { //object goes out of view (scrolling up)
+                        if ($(this).css("opacity") == 1) {
+                            $(this).fadeTo(500, 0);
+                        }
+                    }
+                });
+            }).scroll(); //invoke scroll-handler on page-load
         });
     </script>
+    <p style="color: white">We think algorithms are an objective truth but in fact, theyre just using math to optimize for a select few peopleès idea of success based on what their values are. In corporate settings itès usually profit. Give example of childhood memory, what
+        you probably didnt think of, is that youère creating data. Data like (give examples) for humans we call this data memories/ life experience and shape the way we live our lives, making us more intelligent over time When we were born, we weren’t
+        given a hard coded set of instructions for how to lvive life, we gained these “rules for how the world works” as we grew and collected more data. Likewise, intelligent machines nowadays don’t have a hard-coded set a rule,s they make them themselves
+        through lots and lots of data to be able to find complex patterns in multi-dimentional space and predict what will happen in the future. This is called machine learning and falls under the broad category of artificial intelligence. This is also
+        why companies aer so data hungry. Information is the new currency. In the caseof social mediatech companies just use tech company s companies like Facebook, Youtube or even search engineslike Google, they look for patterns in your hebahviour like
+        what videos you like watching, whatyour interests and they call these identified patterns algorithms. For example, if you were a preparing to go on a 30-day backpacking trip in the Amazon rainforest and searched up jaguar, google would probably
+        give you information about jaguar the animal. However, if you were a car enthusiast and spent most of your time on google searching up car models, if you search up jaguar, google would probably give you information on the januar brand cars. Want
+        to work for google? You already do…….
+    </p>
+    <a href="pg2.html" style="color:white">Press here</a>
 </body>
-
-</html>

@@ -1,0 +1,50 @@
+.game-font {
+    font-family: 'Press Start 2P';
+}
+
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.rotate {
+    animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.gradient-navbar {
+    background: url(gradient.gif);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px;
+    background-size: contain;
+}
+
+.marquee-menu {
+    width: 100%;
+    height: 80px;
+    background-size: contain;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li a:hover {
+    background-color: #111;
+}
