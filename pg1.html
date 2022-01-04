@@ -7,37 +7,44 @@
     <title>How social media is brainwashing you</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
 
+    <!-- Importing Inter font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 
-<body style="background-color:black">
+<body class="tv" style="background-color:black">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
     <div>
-        <div class="fade">Ever wonder why is societally becoming more politically divided?</div>
-        <div class="fade">Why protecting your privacy and not collecting your data is valued?</div>
-        <div class="fade">Fake news spreads faster than real news</div>
-        <div class="fade">Welcome to</div>
-        <div class="fade">Understanding the Implications of Content Algorithms</div>
-        <div class="fade">But first, what is a content algorithm?</div>
+        <div class="fade inter">
+            <h1 style="padding:50px;">Ever wonder why is society becoming more politically divided?</h1>
+        </div>
+        <div> <img class="img-center" style="width:75%; padding:50px;" src="img/poli-div.gif"><img></div>
+        <div class="fade inter">
+            <h1 style="padding:50px;">How companies like <span style="color: #34a853;">Google,</span> <span
+                    style="color: #3b5998;">Facebook,</span> and <span style="color: #c4302b;">Youtube</span> make
+                money?</h1>
+        </div>
+        <div class="fade inter">
+            <h1 style="padding:50px;">Why fake news spreads<span style="color:red;"> 6x </span>faster than real news?
+            </h1>
+        </div>
+        <div class="fade inter">
+            <h1 style="padding:50px;">Welcome to...</h1>
+        </div>
+        <div class="fade inter img-center"><img src="img/understanding.png" style="max-width: 100%;"></img></div>
+        <!-- Click link to access the next page -->
+        <div class="fade inter"><a href="pg2.html" style="color:white;">But first, what is a content algorithm?</a>
+        </div>
     </div>
 
-    <style>
-        .fade {
-            margin: 300px;
-            padding: 100px;
-            background-color: white;
-            opacity: 1;
-        }
-    </style>
-
     <script>
-        $(window).on("load", function() {
-            $(window).scroll(function() {
+        // Fade effect on scroll
+        $(window).on("load", function () {
+            $(window).scroll(function () {
                 var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-                $(".fade").each(function() {
+                $(".fade").each(function () {
                     /* Check the location of each desired element */
                     var objectBottom = $(this).offset().top + $(this).outerHeight();
 
@@ -52,17 +59,7 @@
                         }
                     }
                 });
-            }).scroll(); //invoke scroll-handler on page-load
+            }).scroll();
         });
     </script>
-    <p style="color: white">We think algorithms are an objective truth but in fact, theyre just using math to optimize for a select few peopleès idea of success based on what their values are. In corporate settings itès usually profit. Give example of childhood memory, what
-        you probably didnt think of, is that youère creating data. Data like (give examples) for humans we call this data memories/ life experience and shape the way we live our lives, making us more intelligent over time When we were born, we weren’t
-        given a hard coded set of instructions for how to lvive life, we gained these “rules for how the world works” as we grew and collected more data. Likewise, intelligent machines nowadays don’t have a hard-coded set a rule,s they make them themselves
-        through lots and lots of data to be able to find complex patterns in multi-dimentional space and predict what will happen in the future. This is called machine learning and falls under the broad category of artificial intelligence. This is also
-        why companies aer so data hungry. Information is the new currency. In the caseof social mediatech companies just use tech company s companies like Facebook, Youtube or even search engineslike Google, they look for patterns in your hebahviour like
-        what videos you like watching, whatyour interests and they call these identified patterns algorithms. For example, if you were a preparing to go on a 30-day backpacking trip in the Amazon rainforest and searched up jaguar, google would probably
-        give you information about jaguar the animal. However, if you were a car enthusiast and spent most of your time on google searching up car models, if you search up jaguar, google would probably give you information on the januar brand cars. Want
-        to work for google? You already do…….
-    </p>
-    <a href="pg2.html" style="color:white">Press here</a>
 </body>
